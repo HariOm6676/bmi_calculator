@@ -1,4 +1,5 @@
-import 'package:bmi_calculator/main.dart';
+// import 'package:bmi_calculator/main.dart';
+import 'package:bmi_calculator/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class BMICalculator extends StatefulWidget {
@@ -44,7 +45,8 @@ class _BMICalculatorState extends State<BMICalculator> {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: SingleChildScrollView(
+      drawer: MyDraw(),
+          body: SingleChildScrollView(
         child: Center(
           child: Container(
             height: height,
@@ -57,6 +59,9 @@ class _BMICalculatorState extends State<BMICalculator> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  // Container(
+                  //   child: MyDraw(),
+                  // ),
                   SizedBox(
                     height: 100,
                   ),
@@ -267,6 +272,7 @@ class _BMICalculatorState extends State<BMICalculator> {
           ),
         ),
       ),
+      // drawer: MyDraw(),
     );
   }
 }
